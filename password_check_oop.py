@@ -35,7 +35,7 @@ class PasswordChecker:
             result: {self.result} >> {self.status}'
         return result
 
-    def check_password(self):
+    def check_password(self) -> bool:
         result = True
 
         self.num_cap_letters = 0
@@ -71,8 +71,11 @@ class PasswordChecker:
 
         return result
 
-    def get(self):
+    def get(self) -> bool:
         return self.result
+
+    def get_status(self):
+        return self.status
     
 
 if __name__ == '__main__':
